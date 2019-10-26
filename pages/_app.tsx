@@ -1,8 +1,8 @@
-import Meta from "../components/Meta";
 import App from "next/app";
 import { normalize } from "polished";
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Meta from "../components/Meta";
 import { theme } from "../lib/theme";
 import { isServer } from "../lib/utils";
 const Web3 = require("web3");
@@ -34,8 +34,6 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     const web3Instance = new Web3(Web3.givenProvider);
-
-    console.log(web3Instance.currentProvider);
 
     if (!isServer && web3Instance.currentProvider === null) {
       return (
