@@ -24,6 +24,12 @@ Start in production:
 yarn start || npm run start
 ```
 
+Analyze Bundle:
+
+```
+yarn analyze || npm run analyze
+```
+
 ## Some Notes:
 
 I wanted to use the aragon-ui library for this, but it seems it's not compatible with next.js or SSR in general.
