@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import Link from "next/link";
 import { SingletonRouter, withRouter } from "next/router";
-import React, { FC, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Transactions from "../../components/Transactions";
 
@@ -20,7 +21,7 @@ const BackButton = styled.button`
   align-self: baseline;
 `;
 
-const BlockDetails: FC<Props> = ({
+const BlockDetails: NextPage<Props> = ({
   router: {
     query: { number }
   },

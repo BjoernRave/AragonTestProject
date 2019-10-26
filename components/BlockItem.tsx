@@ -17,18 +17,16 @@ const BlockItemWrapper = styled.div`
 
 const Date = styled.span``;
 
-const BlockItem: FC<Props> = ({ block }) => {
-  return (
-    <Link href="/blocks/[number]" as={`/blocks/${block.number}`}>
-      <BlockItemWrapper>
-        <span>{block.number}</span>
-        <Date>{dayjs(block.timestamp).format("DD.MM.YYYY - hh:mm:ss")}</Date>
-        <span>{block.size}</span>
-        <span>{block.totalDifficulty}</span>
-      </BlockItemWrapper>
-    </Link>
-  );
-};
+const BlockItem: FC<Props> = ({ block }) => (
+  <Link href="/blocks/[number]" as={`/blocks/${block.number}`}>
+    <BlockItemWrapper>
+      <span>{block.number}</span>
+      <Date>{dayjs(block.timestamp).format("DD.MM.YYYY - hh:mm:ss")}</Date>
+      <span>{block.size}</span>
+      <span>{block.totalDifficulty}</span>
+    </BlockItemWrapper>
+  </Link>
+);
 
 export default BlockItem;
 

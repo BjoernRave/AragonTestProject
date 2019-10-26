@@ -1,5 +1,5 @@
+import Meta from "../components/Meta";
 import App from "next/app";
-import Head from "next/head";
 import { normalize } from "polished";
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
@@ -50,16 +50,8 @@ class MyApp extends App {
 
     return (
       <>
-        <GlobalStyles></GlobalStyles>
-        <Head>
-          <title>Ethereum Blocks Explorer</title>
-          <meta charSet="utf-8" />
-          <link rel="shortcut icon" href="/ethereum.png" />
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
-          />
-        </Head>
+        <GlobalStyles />
+        <Meta />
         <ThemeProvider theme={theme}>
           <Component web3={web3Instance} {...pageProps} />
         </ThemeProvider>
