@@ -1,0 +1,42 @@
+{
+  "name": "aragon-block-explorer",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true yarn build"
+  },
+  "dependencies": {
+    "dayjs": "^1.8.16",
+    "next": "9.1.1",
+    "polished": "^3.4.1",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "styled-components": "^4.4.0",
+    "web3": "^1.2.2"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.1.1",
+    "@types/node": "12.11.7",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
+    "@types/styled-components": "4.1.19",
+    "babel-plugin-styled-components": "^1.10.6",
+    "typescript": "3.6.4"
+  },
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      [
+        "styled-components",
+        {
+          "ssr": true
+        }
+      ]
+    ]
+  }
+}
